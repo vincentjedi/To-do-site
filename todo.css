@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+.todo-card{
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    width: fit-content;
+    padding: 30px;
+    height: 100%;
+    background-color: blanchedalmond;
+    border-radius: 4px;
+}
+
+h3 {
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+#btn {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(43, 49, 47);
+    color: white;
+    opacity: 0.5;
+    transition-duration: 0.4s;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#btn:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  #btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+#btn:hover{
+    opacity: 1;
+}
+
+
+
+ul li {
+    cursor: pointer;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 15px;
+    position: relative;
+    user-select: none;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-image: url(checked.jpg);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .todo-card{
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        margin: 170px auto;
+        width: fit-content;
+        padding: 30px;
+        height: 100%;
+        background-color: blanchedalmond;
+        border-radius: 4px;
+        opacity: 0.9;
+    }
+    
+    #btn{
+        position: absolute;
+        left: 14rem;
+        right: 1rem;
+        border-radius: 25%;
+        padding: 3px;
+        top: 15.29rem;
+        width: fit-content;
+    }
+
+    body{
+        background-image: url(ruth.jpg);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+       
+    }
+}
